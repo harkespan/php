@@ -8,7 +8,7 @@
 		<div class="row">
 			<div class="span12">
 				<fieldset>
-					<form method="post" action="dbdemo/simpan.php" enctype="multipart/form-data">
+					<form method="post" action="simpan.php" enctype="multipart/form-data">
 						<legend>Input Form</legend>
 						<input type="text" name="nim" required><br/>
 						<input type="text" name="nama" required><br/>
