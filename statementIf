@@ -1,4 +1,0 @@
-<?php
-	$kode='ABC';
-	echo strlen($kode);
-?>
