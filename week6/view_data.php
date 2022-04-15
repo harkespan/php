@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    if($_SESSION['isLogin'] != true || $_SESSION['jam_selesai']==date("Y-m-d H:i:s"))
+    {
+        header("Location: login.php?message=nologin");
+    }
+
     include "../config/database.php";
 
     $rs = $db->query("SELECT * FROM users");

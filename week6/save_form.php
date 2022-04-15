@@ -9,7 +9,8 @@
     {
         $psw = password_hash($passwd,PASSWORD_DEFAULT);
 
-	    $db->query("INSERT INTO users (username,passwd) VALUES ('".$uname."','".$psw."')");
+	    $ins = $db->prepare("INSERT INTO users (username,passwd) VALUES (?,?)");
+        $ins->execute([$uname,$passwd]);
         header("Location: registration.php?msg=success");  	
     }
     else
