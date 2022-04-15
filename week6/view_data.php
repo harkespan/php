@@ -22,7 +22,7 @@
         <td><?php echo $i?></td>
         <td><?php echo $data->username?></td>
         <td><?php echo $data->active==0?"Non Aktif":"Aktif"?></td>
-        <td>Edit | <a href="delete.php?id=<?php echo $data->id?>">Delete</a></td>
+        <td><a href="edit.php?id=<?php echo base64_encode(sha1(rand())."|".$data->id)?>">Edit</a> | <a href="delete.php?id=<?php echo base64_encode(sha1(rand())."|".$data->id)?>">Delete</a></td>
     </tr>
 <?php
         $i++;
