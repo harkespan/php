@@ -1,5 +1,5 @@
 <h4>Daftar User</h4>
-    <a href="addUser.php" class="btn btn-primary">Tambah User</a>
+    <a href="home.php?page=add" class="btn btn-primary">Tambah User</a>
     <table cellspacing=0 cellpadding=5 class="table table-bordered table-striped">
         <tr>
             <th>No</th>
@@ -17,7 +17,7 @@
                 <td><?=$i?></td>
                 <td><?=$user['username']?></td>
                 <td><?=$user['active'] == 1?"Aktif":"Tidak Aktif"?></td>
-                <td>Edit | <a href="act_deleteUser.php?id=<?=$user['id']?>">Hapus</a></td>
+                <td><a href="home.php?page=edit&id=<?=$user['id']?>">Edit</a>  | <a href="act_deleteUser.php?id=<?=$user['id']?>">Hapus</a></td>
             </tr>
 
         <?php

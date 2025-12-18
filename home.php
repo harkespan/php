@@ -25,6 +25,7 @@
             switch($_GET['page'])
             {
                 case 'add' : include("addUser.php");break;
+                case 'edit': include('editUser.php');break;
                 default: include("listUser.php");break;
             }
         }
